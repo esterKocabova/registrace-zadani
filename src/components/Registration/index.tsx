@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import { useState } from "react";
 export function Registration() {
-    const [user, setUser] = useState({
+    const [user, setUser] = useState ({
         username: '',
         email: '',
         password: '',
         passwordConfirm: ''
     });
-    const handleChange = (event) => {
+    const handleChange = (event: { target: { name: string; value: string; }; }) => {
         const { name, value } = event.target;
         setUser(prev => ({
             ...prev,
@@ -20,7 +20,7 @@ export function Registration() {
             }));
         }
     };
-    const handleSubmit = (event) => {
+    const handleSubmit = (event: { preventDefault: () => void; }) => {
         event.preventDefault();
         console.log(user);
     };

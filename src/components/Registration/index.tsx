@@ -25,6 +25,8 @@ export function Registration() {
         console.log(user);
     };
     return (
+        <div className="registration">
+        <h1>Sign Up form</h1>
         <form onSubmit={handleSubmit}>
             <input
                 type="email"
@@ -54,9 +56,10 @@ export function Registration() {
                 onChange={handleChange}
                 placeholder="Confirm Password"
             />
-            <div className="center">
-                <button type="submit">Register</button>
+            <div className="">
+                <button className="btn-grad" type="submit">Register</button>
             </div>
         </form>
+        </div>
     );
 }
